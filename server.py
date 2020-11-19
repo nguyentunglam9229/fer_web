@@ -37,8 +37,9 @@ def upload():
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
 	if request.method == 'POST':
-		print(request.form)
-		f = request.form.get('image')
+		print(request)
+		print(request.files)
+		f = request.files.get('image')
 		f.save(f.filename)
 		return 'file uploaded successfully'
 
@@ -65,6 +66,6 @@ def predict():
 	return flask.jsonify(data)
 if __name__ == "__main__":
 	load_model()
-	app.run(host="localhost", port=5000,debug = False, threaded = False)	
+	app.run(host="localhost", port=5000,debug = True, threaded = False)
 	#app.run(debug = False, threaded = False)	
 
