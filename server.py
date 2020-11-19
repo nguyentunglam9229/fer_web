@@ -66,6 +66,6 @@ def predict():
 	return flask.jsonify(data)
 if __name__ == "__main__":
 	load_model()
-	app.run(host="localhost", port=5000,debug = True, threaded = False)
+	app.run(host="localhost", port=5000,debug = False, threaded = False)
 	#app.run(debug = False, threaded = False)	
 

@@ -115,33 +115,9 @@ body {
   transition: all .2s ease;
 }
 
-.paid {
-    color: black
-}
+canvas{
 
-.sent {
-    color: blue
-}
+  width:300px !important;
+  height:300px !important;
 
-body, html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "fira-sans-2", Verdana, sans-serif;
-}
-
-#q-graph {
-  display: block; /* fixes layout wonkiness in FF1.5 */
-  position: relative; 
-  width: 600px; 
-  height: 300px;
-  margin: 1.1em 0 0; 
-  padding: 0;
-  background: transparent;
-  font-size: 11px;
 }
