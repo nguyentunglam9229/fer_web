@@ -10,6 +10,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <body>
+<div style="width: 500px;height: 500px; margin: auto;">
 <form method="POST" enctype="multipart/form-data">
     <div class="file-upload">
         <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image
@@ -27,7 +28,7 @@
                     <img class="file-upload-image col" src="#" alt="your image"/>
                 </div>
                 <div class="col">
-                    <canvas class="col" id="myChart" width="200" height="200" style="width: 200px; height: 200px"></canvas>
+                    <canvas class="col" id="myChart"></canvas>
                 </div>
             </div>
             <div class="image-title-wrap">
@@ -38,22 +39,25 @@
     </div>
 
 </form>
+</div>
 </body>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['beagle', 'walker_hound', 'pot', 'bluetick', 'basset'],
+            labels: ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise'],
             datasets: [{
                 label: 'probability',
-                data: [0.1, 0.2, 0.2, 0.2, 0.3],
+                data: [0.1, 0.2, 0.2, 0.2, 0.3, 0.1, 0.1],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
+                    'rgba(56, 100, 192, 0.2)',
+                    'rgba(153, 111, 255, 0.2)',
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -61,6 +65,8 @@
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
+                    'rgba(56, 100, 192, 1)',
+                    'rgba(153, 111, 255, 1)',
                 ],
                 borderWidth: 1
             }]
